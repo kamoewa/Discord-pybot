@@ -22,6 +22,8 @@ class MyClient(discord.Client):
     async def on_message(self, message):
        if message.content.startswith("Hi"): #output what the user say's
            await message.channel.send("Hello") #output what the bot will say
+       if message.content.startswith("gn8"): #output what the user say's
+           await message.channel.send("Good night") #output what the bot will say
 
 client = MyClient()
 client.run("my bot token")
